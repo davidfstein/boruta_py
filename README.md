@@ -170,6 +170,8 @@ __verbose__ : int, default=0
   >  best) features are assigned rank 1 and tentative features are assigned
   >  rank 2.
 
+**importance_history_** : array-like, shape [n_features, n_iters]
+  > The calculated importance values for each feature across all iterations. 
 
 ## Examples ##
 
@@ -199,6 +201,9 @@ feat_selector.support_
 
 # check ranking of features
 feat_selector.ranking_
+
+# check feature importance history
+feat_selector.importance_history_
 
 # call transform() on X to filter it down to selected features
 X_filtered = feat_selector.transform(X)
